@@ -8,18 +8,17 @@ class New() {
         fun main(args: Array<String>) {
             var array = arrayOf("batu", "gunting", "kertas")
 
-            // intro
-
+            // IN
             println("===== MAIN SUIT =====")
             println("Batu, Gunting, Kertas")
             println("=====================")
-            // Pemain 1
-            // bikin loop
+
+            // Loop 3x
             var i = 0
             do {
 
-
-                println("Pemain 1 pilih apa?")
+                // Pemain 1
+                println("Pemain Pertama pilih apa?")
                 var pemainPertama = readLine()!!.toLowerCase()
                 if (!array.contains(pemainPertama)) {
                     do {
@@ -29,7 +28,7 @@ class New() {
                 }
 
                 // Pemain 2
-                println("Yuk, Pemain 2?")
+                println("Yuk, Pemain Kedua?")
                 var pemainKedua = readLine()!!.toLowerCase()
                 if (!array.contains(pemainKedua)) {
                     do {
@@ -38,11 +37,12 @@ class New() {
                     } while (!array.contains(pemainKedua))
                 }
 
-                val mekanik1 = mekanik()
-                mekanik1.cetakMekanik(pemainPertama, pemainKedua)
-                println(if (i <2 )"Lanjut" else "Selasai")
+                // Panggilan
+                val suit1 = Suit()
+                suit1.cetakSuit(pemainPertama, pemainKedua)
+                println(if (i < 2) "Lanjut ya..." else "Selasai, sampai jumpa.")
                 i++
-            } while (i <3)
+            } while (i < 3)
         }
     }
 }

@@ -1,5 +1,5 @@
-class mekanik() {
-    fun cetakMekanik(pemainPertama: String?, pemainKedua: String?) {
+class Suit() {
+    fun cetakSuit(pemainPertama: String?, pemainKedua: String?) {
         if ((pemainPertama.equals("batu") && pemainKedua.equals("gunting")) ||
             (pemainPertama.equals("gunting") && pemainKedua.equals("kertas")) ||
             (pemainPertama.equals("kertas") && pemainKedua.equals("batu"))
@@ -11,6 +11,6 @@ class mekanik() {
         )
             println("Pemain Kedua MENANG!")
         else if (pemainPertama.equals(pemainKedua))
-            println("DRAW!")
+            println("SERI!")
     }
 }
